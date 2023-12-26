@@ -1,16 +1,10 @@
 function insert_Row() {
     //Write your code here
-	const table=document.querySelector('#sampleTable');
-	const rows=table.querySelectorAll('tr');
-	const newArr=[...rows];
-	rows.forEach((item)=>item.remove());
+	const table=document.getElementById('sampleTable');
+	const button=document.querySelector('input');
+	
 	const tr=document.createElement('tr');
-	const colOne=document.createElement('td');
-	const colTwo=document.createElement('td');
-
-	colOne.innerText="New Cell1"
-	colTwo.innerText="New Cell2"
-	tr.append(colOne,colTwo);
-	table.append(tr);
-	newArr.forEach((item)=>table.append(item));
+		tr.innerHTML=`<td>New cell1</td> 
+		<td>New cell2</td>`;
+		table.insertBefore(tr,table.children[0]);
 }
