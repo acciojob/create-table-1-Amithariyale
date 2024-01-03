@@ -4,6 +4,6 @@ function insert_Row() {
 	const button=document.querySelector('input');
 	
 	const tr=document.createElement('tr');
-		tr.innerHTML=`<td>New cell1</td><td>New cell2</td>`;
+		tr.innerHTML=`<td>New Cell1</td><td>New Cell2</td>`;
 		table.insertBefore(tr,table.children[0]);
 }
